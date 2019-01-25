@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - v1
+  - objects
   - codes
   - contrib
 
@@ -38,7 +39,7 @@ Key generation endpoints also support Basic authentication using your Limelight 
 
 ```shell
 curl "endpoint"
-  -H "Authorization: Basic basic_auth"
+  -H "Authorization: Basic BASE64(user:pass)"
 ```
 
 Currently API keys can only be generated programatically using basic auth via key generation endpoints. As this can be done via browser, we highly recommend manually generating these keys, and using them for your applications.
