@@ -263,6 +263,9 @@
                     <a href="#array" class="toc-h2 toc-link" data-title="Array">Array</a>
                   </li>
                   <li>
+                    <a href="#api-data-object" class="toc-h2 toc-link" data-title="API Data Object">API Data Object</a>
+                  </li>
+                  <li>
                     <a href="#player-objects" class="toc-h2 toc-link" data-title="Player Objects">Player Objects</a>
                   </li>
                   <li>
@@ -279,6 +282,17 @@
                   </li>
                   <li>
                     <a href="#api-key" class="toc-h2 toc-link" data-title="API Key">API Key</a>
+                  </li>
+                  <li>
+                    <a href="#post-object" class="toc-h2 toc-link" data-title="Post Object">Post Object</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-v2" class="toc-h1 toc-link" data-title="API v2">API v2</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#api-data" class="toc-h2 toc-link" data-title="API Data">API Data</a>
                   </li>
               </ul>
           </li>
@@ -955,7 +969,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/api-response.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/api-response.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Response Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The base object returned by any query."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -980,15 +994,50 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This object is used as the base of all v2+ API responses. Any further response data or resources are returned in the data section.</p>
 <h2 id='array'>Array</h2>
 <p>A collection of multiple returned resources.</p>
+
+<blockquote>
+<p>Array Schema</p>
+</blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/array.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/array.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Array"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An array with multiple sets of contained data."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"string"</span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='api-data-object'>API Data Object</h2>
+<p>The API data object is returned when providing a generic query against the root endpoint.</p>
+
+<blockquote>
+<p>API Data</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/apidata.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Data"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An object which contains data about the API itself."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The name of the API service."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The API description."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"endpoints"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Array of endpoints and help messages."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"steamid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='player-objects'>Player Objects</h2>
 <p>Player objects may vary with extra data depending on the endpoint. However, all of these base themselves off a base player object.</p>
@@ -1000,7 +1049,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/base-player.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Base Player Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The base player object."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1025,11 +1074,11 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/clan-player.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan-player.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan Player Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The player object returned by Clan APIs."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"allOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/base-player.schema.json"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"allOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="p">}],</span><span class="w">
     </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"rankid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID which represents the player's rank within the clan."</span><span class="p">,</span><span class="w">
@@ -1044,9 +1093,13 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='changelog'>Changelog</h2>
 <p>These objects are emitted by the changelog APIs.</p>
+
+<blockquote>
+<p>Changelog Schema:</p>
+</blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/changelog.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/changelog.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a public commit."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1081,7 +1134,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/rank-permissions.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank-permissions.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan Rank Permissions"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan rank's permissions."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1117,7 +1170,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/rank.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan rank."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1132,7 +1185,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"perms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The rank permissions."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/base-player.schema.json"</span><span class="w">
+            </span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">]</span><span class="w">
@@ -1141,7 +1194,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>The clan object contains all data required for the identification of a clan.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/clan.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1157,12 +1210,12 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
         </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The rank permissions."</span><span class="p">,</span><span class="w">
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/rank.schema.json"</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank.schema.json"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The members."</span><span class="p">,</span><span class="w">
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/clan-player.schema.json"</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan-player.schema.json"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">]</span><span class="w">
@@ -1171,7 +1224,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This data is only used by the /me endpoint to identify the user that owns this key.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/me.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/me.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Self"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data about a user key."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1206,7 +1259,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This is data returned by API key endpoints.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://doctor-internet.github.io/slate/key.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/key.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Key"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API key data."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1225,9 +1278,46 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
             </span><span class="s2">"minimum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-1"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"auth_method"</span><span class="p">]</span><span class="w">
+    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"api_key"</span><span class="p">,</span><span class="w"> </span><span class="s2">"steamid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"permissions"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='response-codes'>Response Codes</h1>
+</span></code></pre><h2 id='post-object'>Post Object</h2>
+<p>This is data returned by any endpoint handling posts.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/post.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forum post."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The ID of the post."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The title of the thread."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The opening post."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"uid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The userID of the user who made the thread."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"numer"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The type of post."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"pid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"subject"</span><span class="p">,</span><span class="w"> </span><span class="s2">"message"</span><span class="p">,</span><span class="w"> </span><span class="s2">"uid"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='api-v2'>API v2</h1>
+<p>All the following endpoints use the v2 interface. Whilst currently still being extended with more fuctionality, the v2 interface has much more standardized responses due to a more in-depth backend.</p>
+<h2 id='api-data'>API Data</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v1/"</span>
+</code></pre>
+<p>Response: []</p>
+<h1 id='response-codes'>Response Codes</h1>
 <p>The Limelight API uses the following HTTP codes:</p>
 
 <table><thead>
