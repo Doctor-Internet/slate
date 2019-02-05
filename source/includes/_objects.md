@@ -9,7 +9,7 @@ As of API version v2, API response objects have been standardized, and the respo
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/api-response.schema.json",
+	"$id": "https://joshpiper.github.io/slate/api-response.schema.json",
 	"title": "API Response Object",
 	"description": "The base object returned by any query.",
 	"type": "object",
@@ -43,7 +43,7 @@ A collection of multiple returned resources.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/array.schema.json",
+	"$id": "https://joshpiper.github.io/slate/array.schema.json",
 	"title": "Array",
 	"description": "An array with multiple sets of contained data.",
 	"type": "array",
@@ -62,7 +62,7 @@ The API data object is returned when providing a generic query against the root 
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/apidata.schema.json",
+	"$id": "https://joshpiper.github.io/slate/apidata.schema.json",
 	"title": "API Data",
 	"description": "An object which contains data about the API itself.",
 	"type": "object",
@@ -100,7 +100,7 @@ The base player object is the minimum amount of data used to describe a player i
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/base-player.schema.json",
+	"$id": "https://joshpiper.github.io/slate/base-player.schema.json",
 	"title": "Base Player Object",
 	"description": "The base player object.",
 	"type": "object",
@@ -128,11 +128,11 @@ The clan member object is returned from clan APIs, and has additional informatio
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/clan-player.schema.json",
+	"$id": "https://joshpiper.github.io/slate/clan-player.schema.json",
 	"title": "Clan Player Object",
 	"description": "The player object returned by Clan APIs.",
 	"type": "object",
-	"allOf": [{"$ref": "https://doctor-internet.github.io/slate/base-player.schema.json"}],
+	"allOf": [{"$ref": "https://joshpiper.github.io/slate/base-player.schema.json"}],
 	"properties": {
 		"rankid": {
 			"description": "ID which represents the player's rank within the clan.",
@@ -156,7 +156,7 @@ These objects are emitted by the changelog APIs.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/changelog.schema.json",
+	"$id": "https://joshpiper.github.io/slate/changelog.schema.json",
 	"title": "Changelog",
 	"description": "The representation of a public commit.",
 	"type": "object",
@@ -196,7 +196,7 @@ Rank permission objects are used to represent different rank permission structur
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/rank-permissions.schema.json",
+	"$id": "https://joshpiper.github.io/slate/rank-permissions.schema.json",
 	"title": "Clan Rank Permissions",
 	"description": "The representation of a clan rank's permissions.",
 	"type": "object",
@@ -235,7 +235,7 @@ The clan rank object describes a single rank within the clan structure and can o
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/rank.schema.json",
+	"$id": "https://joshpiper.github.io/slate/rank.schema.json",
 	"title": "Changelog",
 	"description": "The representation of a clan rank.",
 	"type": "object",
@@ -250,7 +250,7 @@ The clan rank object describes a single rank within the clan structure and can o
 		},
 		"perms": {
 			"description": "The rank permissions.",
-			"$ref": "https://doctor-internet.github.io/slate/base-player.schema.json"
+			"$ref": "https://joshpiper.github.io/slate/base-player.schema.json"
 		}
 	},
 	"required": ["id", "name"]
@@ -264,7 +264,7 @@ The clan object contains all data required for the identification of a clan.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/clan.schema.json",
+	"$id": "https://joshpiper.github.io/slate/clan.schema.json",
 	"title": "Changelog",
 	"description": "The representation of a clan.",
 	"type": "object",
@@ -280,12 +280,12 @@ The clan object contains all data required for the identification of a clan.
 		"ranks": {
 			"description": "The rank permissions.",
 			"type": "array",
-			"items": "https://doctor-internet.github.io/slate/rank.schema.json"
+			"items": "https://joshpiper.github.io/slate/rank.schema.json"
 		},
 		"members": {
 			"description": "The members.",
 			"type": "array",
-			"items": "https://doctor-internet.github.io/slate/clan-player.schema.json"
+			"items": "https://joshpiper.github.io/slate/clan-player.schema.json"
 		}
 	},
 	"required": ["id", "name"]
@@ -299,7 +299,7 @@ This data is only used by the /me endpoint to identify the user that owns this k
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/me.schema.json",
+	"$id": "https://joshpiper.github.io/slate/me.schema.json",
 	"title": "Self",
 	"description": "Data about a user key.",
 	"type": "object",
@@ -339,7 +339,7 @@ This is data returned by API key endpoints.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/key.schema.json",
+	"$id": "https://joshpiper.github.io/slate/key.schema.json",
 	"title": "API Key",
 	"description": "API key data.",
 	"type": "object",
@@ -369,7 +369,7 @@ This is data returned by any endpoint handling posts.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://doctor-internet.github.io/slate/post.schema.json",
+	"$id": "https://joshpiper.github.io/slate/post.schema.json",
 	"title": "Post",
 	"description": "Forum post.",
 	"type": "object",
