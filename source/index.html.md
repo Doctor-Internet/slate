@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - v1
   - objects
+  - v2
   - codes
   - contrib
 

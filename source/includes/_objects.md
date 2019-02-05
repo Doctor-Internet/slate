@@ -38,6 +38,8 @@ This object is used as the base of all v2+ API responses. Any further response d
 
 A collection of multiple returned resources.
 
+> Array Schema
+
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
@@ -48,6 +50,40 @@ A collection of multiple returned resources.
 	"items": {
 		"type": ["boolean", "object", "array", "number", "string"]
 	}
+}
+```
+
+## API Data Object
+
+The API data object is returned when providing a generic query against the root endpoint.
+
+> API Data
+
+```json
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://doctor-internet.github.io/slate/apidata.schema.json",
+	"title": "API Data",
+	"description": "An object which contains data about the API itself.",
+	"type": "object",
+	"properties": {
+		"name": {
+			"description": "The name of the API service.",
+			"type": "string"
+		},
+		"description": {
+			"description": "The API description.",
+			"type": "string"
+		},
+		"endpoints": {
+			"description": "Array of endpoints and help messages.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"required": ["steamid", "name"]
 }
 ```
 
@@ -114,6 +150,8 @@ The clan member object is returned from clan APIs, and has additional informatio
 ## Changelog
 
 These objects are emitted by the changelog APIs.
+
+> Changelog Schema:
 
 ```json
 {
@@ -320,6 +358,43 @@ This is data returned by API key endpoints.
 			"minimum": "-1"
 		}
 	},
-	"required": ["auth_method"]
+	"required": ["api_key", "steamid", "permissions"]
+}
+```
+
+## Post Object
+
+This is data returned by any endpoint handling posts.
+
+```json
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://doctor-internet.github.io/slate/post.schema.json",
+	"title": "Post",
+	"description": "Forum post.",
+	"type": "object",
+	"properties": {
+		"pid": {
+			"description": "The ID of the post.",
+			"type": "number"
+		},
+		"subject": {
+			"description": "The title of the thread.",
+			"type": "string"
+		},
+		"message": {
+			"description": "The opening post.",
+			"type": "string"
+		},
+		"uid": {
+			"description": "The userID of the user who made the thread.",
+			"type": "numer"
+		},
+		"type": {
+			"description": "The type of post.",
+			"type": "string"
+		}
+	},
+	"required": ["pid", "subject", "message", "uid"]
 }
 ```
