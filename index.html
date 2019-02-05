@@ -294,6 +294,9 @@
                   <li>
                     <a href="#api-data" class="toc-h2 toc-link" data-title="API Data">API Data</a>
                   </li>
+                  <li>
+                    <a href="#authentication-endpoints" class="toc-h2 toc-link" data-title="Authentication Endpoints">Authentication Endpoints</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1314,9 +1317,88 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='api-v2'>API v2</h1>
 <p>All the following endpoints use the v2 interface. Whilst currently still being extended with more fuctionality, the v2 interface has much more standardized responses due to a more in-depth backend.</p>
-<h2 id='api-data'>API Data</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v1/"</span>
+<h2 id='api-data'>API Data</h2>
+<p>This only contains the root endpoint, and is used to get data about the API.</p>
+<h3 id='get'>GET /</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/"</span>
 </code></pre>
+<p>Get information about the API.</p>
+
 <p>Response: <a href="#api-data-object">API Data Object</a></p>
+<h2 id='authentication-endpoints'>Authentication Endpoints</h2>
+<p>These endpoints are used for the purpose of authentication, and for checking of credentials.</p>
+<h3 id='get-me'>GET /me</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span>
+</code></pre>
+<p>Get information about the currently authenticated user.</p>
+
+<p>Response: <a href="#self-data">Self Data Object</a></p>
+<h3 id='get-keys'>GET /keys</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<aside class="notice">This endpoint supports Basic authentication.</aside>
+
+<p>List all keys associated with the current account.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#api-key">API Key</a> )</p>
+<h3 id='post-keys'>POST /keys</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys"</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<aside class="notice">This endpoint supports Basic authentication.</aside>
+
+<p>Generate a new API key.</p>
+
+<p>Response: <a href="#api-key">API Key</a></p>
+<h3 id='get-keys-key'>GET /keys/{key}</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/my_api_key"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<aside class="notice">This endpoint supports Basic authentication.</aside>
+
+<p>Get data about a specific key.</p>
+
+<p>Response: <a href="#api-key">API Key</a></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>The API key to retrieve.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='delete-keys-key'>DELETE /keys/{key}</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/my_api_key"</span> <span class="se">\</span>
+  -X DELETE <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<aside class="notice">This endpoint supports Basic authentication.</aside>
+
+<p>Delete an API key</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>The API key to delete.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
 <h1 id='response-codes'>Response Codes</h1>
 <p>The Limelight API uses the following HTTP codes:</p>
 
