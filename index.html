@@ -275,6 +275,9 @@
                     <a href="#clan-rank" class="toc-h2 toc-link" data-title="Clan Rank">Clan Rank</a>
                   </li>
                   <li>
+                    <a href="#clan-invite" class="toc-h2 toc-link" data-title="Clan Invite">Clan Invite</a>
+                  </li>
+                  <li>
                     <a href="#clan" class="toc-h2 toc-link" data-title="Clan">Clan</a>
                   </li>
                   <li>
@@ -296,6 +299,15 @@
                   </li>
                   <li>
                     <a href="#authentication-endpoints" class="toc-h2 toc-link" data-title="Authentication Endpoints">Authentication Endpoints</a>
+                  </li>
+                  <li>
+                    <a href="#changelog-apis" class="toc-h2 toc-link" data-title="Changelog APIs">Changelog APIs</a>
+                  </li>
+                  <li>
+                    <a href="#clan-apis" class="toc-h2 toc-link" data-title="Clan APIs">Clan APIs</a>
+                  </li>
+                  <li>
+                    <a href="#news-endpoints" class="toc-h2 toc-link" data-title="News Endpoints">News Endpoints</a>
                   </li>
               </ul>
           </li>
@@ -972,7 +984,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/api-response.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/api-response.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Response Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The base object returned by any query."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1003,7 +1015,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/array.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/array.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Array"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An array with multiple sets of contained data."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
@@ -1019,7 +1031,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/apidata.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/apidata.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Data"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An object which contains data about the API itself."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1052,7 +1064,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/base-player.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Base Player Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The base player object."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1077,11 +1089,11 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan-player.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/clan-player.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan Player Object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The player object returned by Clan APIs."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"allOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"allOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/base-player.schema.json"</span><span class="p">}],</span><span class="w">
     </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"rankid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID which represents the player's rank within the clan."</span><span class="p">,</span><span class="w">
@@ -1102,7 +1114,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/changelog.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/changelog.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a public commit."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1137,7 +1149,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank-permissions.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/rank-permissions.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan Rank Permissions"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan rank's permissions."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1173,7 +1185,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/rank.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan rank."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1188,17 +1200,47 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"perms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The rank permissions."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/base-player.schema.json"</span><span class="w">
+            </span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/base-player.schema.json"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='clan-invite'>Clan Invite</h2>
+<p>The clan invite object provides information about invites.</p>
+
+<blockquote>
+<p>Clan Invite Schema:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/clan-invite.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan Player Object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The invite object returned by Clan APIs."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"invitedby"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name (!) of the player who invited the player."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RFC 3339 encoded timestamp."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"regex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(</span><span class="se">\\</span><span class="s2">d+)-(0[1-9]|1[012])-(0[1-9]|[12]</span><span class="se">\\</span><span class="s2">d|3[01])[Tt]([01]</span><span class="se">\\</span><span class="s2">d|2[0-3]):([0-5]</span><span class="se">\\</span><span class="s2">d):([0-5]</span><span class="se">\\</span><span class="s2">d|60)(</span><span class="se">\\</span><span class="s2">.</span><span class="se">\\</span><span class="s2">d+)?(([Zz])|([</span><span class="se">\\</span><span class="s2">+|</span><span class="se">\\</span><span class="s2">-]([01]</span><span class="se">\\</span><span class="s2">d|2[0-3]):[0-5]</span><span class="se">\\</span><span class="s2">d))"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"player"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The player who is being invited."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"allOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/base-player.schema.json"</span><span class="p">}]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"player"</span><span class="p">,</span><span class="w"> </span><span class="s2">"time"</span><span class="p">,</span><span class="w"> </span><span class="s2">"invitedby"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='clan'>Clan</h2>
 <p>The clan object contains all data required for the identification of a clan.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan.schema.json"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Changelog"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/clan.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clan"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The representation of a clan."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1213,12 +1255,12 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
         </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The rank permissions."</span><span class="p">,</span><span class="w">
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/rank.schema.json"</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/rank-permissions.json"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The members."</span><span class="p">,</span><span class="w">
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/clan-player.schema.json"</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/clan-player.schema.json"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">]</span><span class="w">
@@ -1227,7 +1269,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This data is only used by the /me endpoint to identify the user that owns this key.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/me.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/me.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Self"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data about a user key."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1262,7 +1304,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This is data returned by API key endpoints.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/key.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/key.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API Key"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API key data."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1287,7 +1329,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>This is data returned by any endpoint handling posts.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://joshpiper.github.io/slate/post.schema.json"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://dev.limelightgaming.net/docs-api/post.schema.json"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forum post."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
@@ -1319,20 +1361,20 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>All the following endpoints use the v2 interface. Whilst currently still being extended with more fuctionality, the v2 interface has much more standardized responses due to a more in-depth backend.</p>
 <h2 id='api-data'>API Data</h2>
 <p>This only contains the root endpoint, and is used to get data about the API.</p>
-<h3 id='get'>GET /</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/"</span>
+<h3 id='get'>GET /</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/"</span>
 </code></pre>
 <p>Get information about the API.</p>
 
 <p>Response: <a href="#api-data-object">API Data Object</a></p>
 <h2 id='authentication-endpoints'>Authentication Endpoints</h2>
 <p>These endpoints are used for the purpose of authentication, and for checking of credentials.</p>
-<h3 id='get-me'>GET /me</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span>
+<h3 id='get-me'>GET /me</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span>
 </code></pre>
 <p>Get information about the currently authenticated user.</p>
 
 <p>Response: <a href="#self-data">Self Data Object</a></p>
-<h3 id='get-keys'>GET /keys</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span> <span class="se">\</span>
-    -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+<h3 id='get-keys'>GET /keys</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/me"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
 </code></pre>
 <aside class="success">This endpoint requires authorization.</aside>
 
@@ -1341,9 +1383,9 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>List all keys associated with the current account.</p>
 
 <p>Response: <a href="#array">Array</a>( <a href="#api-key">API Key</a> )</p>
-<h3 id='post-keys'>POST /keys</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys"</span> <span class="se">\</span>
+<h3 id='post-keys'>POST /keys</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys"</span> <span class="se">\</span>
   -X POST <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+  -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
 </code></pre>
 <aside class="success">This endpoint requires authorization.</aside>
 
@@ -1352,8 +1394,8 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <p>Generate a new API key.</p>
 
 <p>Response: <a href="#api-key">API Key</a></p>
-<h3 id='get-keys-key'>GET /keys/{key}</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/my_api_key"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+<h3 id='get-keys-key'>GET /keys/:key</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/</span><span class="nv">$my_api_key</span><span class="s2">"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
 </code></pre>
 <aside class="success">This endpoint requires authorization.</aside>
 
@@ -1376,9 +1418,9 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <td>Endpoint URL</td>
 </tr>
 </tbody></table>
-<h3 id='delete-keys-key'>DELETE /keys/{key}</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/my_api_key"</span> <span class="se">\</span>
+<h3 id='delete-keys-key'>DELETE /keys/:key</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/keys/</span><span class="nv">$my_api_key</span><span class="s2">"</span> <span class="se">\</span>
   -X DELETE <span class="se">\</span>
-  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+  -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
 </code></pre>
 <aside class="success">This endpoint requires authorization.</aside>
 
@@ -1399,6 +1441,311 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <td>Endpoint URL</td>
 </tr>
 </tbody></table>
+<h2 id='changelog-apis'>Changelog APIs</h2>
+<p>Changelog APIs are used for reading data about the server changelogs.</p>
+<h3 id='get-changelogs'>GET /changelogs</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/changelogs"</span>
+</code></pre>
+<p>Get changelogs from the default server&#39;s changelog.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#changelog">Changelog</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>legacy</td>
+<td>Switch for legacy mode (object with named revisions, instead of array.)</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional maximum</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional number to skip</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h3 id='get-changelogs-total'>GET /changelogs/total</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/changelogs/total"</span>
+</code></pre>
+<p>Get the number of results returned, if the data was passed to /changelogs.</p>
+
+<p>Response: Number</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>Optional maximum</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional number to skip</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h2 id='clan-apis'>Clan APIs</h2>
+<p>The clan APIs are designed for clan owners designing integration with their own external sites.</p>
+<h3 id='get-clans'>GET /clans</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans"</span>
+</code></pre>
+<p>Retrieve a list of clans from the server.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan">Clan</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>with</td>
+<td>Comma separated list of relations to get with the clans. (ranks,perms,members)</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional maximum</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional number to skip</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id'>GET /clans/:id</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">"</span>
+</code></pre>
+<p>Retrieve a single clan from the server.</p>
+
+<p>Response: <a href="#clan">Clan</a></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>with</td>
+<td>Comma separated list of relations to get with the clans. (ranks,perms,members)</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-members'>GET /clans/:id/members</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members"</span>
+</code></pre>
+<p>Retrieve a single clan&#39;s members.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-member">Clan Member</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-members-sid'>GET /clans/:id/members/:sid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members/</span><span class="nv">$sid</span><span class="s2">"</span>
+</code></pre>
+<p>Retrieve a single clan&#39;s members.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-member">Clan Member</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>sid</td>
+<td>The user&#39;s 64 bit steam id.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-members-2'>GET /clans/:id/members</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members"</span>
+</code></pre>
+<p>Retrieve a single clan&#39;s members.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-member">Clan Member</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-members-sid-2'>GET /clans/:id/members/:sid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members/</span><span class="nv">$sid</span><span class="s2">"</span>
+</code></pre>
+<p>Retrieve a single member from a clan.</p>
+
+<p>Response: <a href="#clan-member">Clan Member</a></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>sid</td>
+<td>The user&#39;s 64 bit steam id.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-ranks'>GET /clans/:id/ranks</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/ranks"</span>
+</code></pre>
+<p>Retrieve a single clan&#39;s ranks.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-rank">Clan Rank</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>with</td>
+<td>Comma separated list of relations to get with the clans. (perms)</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-ranks-rid'>GET /clans/:id/ranks/:rid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/ranks/</span><span class="nv">$rid</span><span class="s2">"</span>
+</code></pre>
+<p>Retrieve a single rank from a clan.</p>
+
+<p>Response: <a href="#clan-rank">Clan Rank</a></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>rid</td>
+<td>The rank id.</td>
+<td>Endpoint URL.</td>
+</tr>
+<tr>
+<td>with</td>
+<td>Comma separated list of relations to get with the clans. (perms)</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-ranks-rid-2'>GET /clans/:id/ranks/:rid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/ranks/</span><span class="nv">$rid</span><span class="s2">/perms"</span>
+</code></pre>
+<p>Retrieve a single rank&#39;s permissions</p>
+
+<p>Response: <a href="#rank-permissions">Rank Permissions</a></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+<tr>
+<td>rid</td>
+<td>The rank id.</td>
+<td>Endpoint URL.</td>
+</tr>
+</tbody></table>
+<h2 id='news-endpoints'>News Endpoints</h2>
+<p>The news endpoints get news / announcements from the forums.
+/news/announcements and /news/updates are both filters for the /news endpoints, and thus won&#39;t be detailed in length here.</p>
+<h3 id='get-news'>GET /news</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/news"</span>
+</code></pre>
+<p>The /news endpoint returns announcement and update threads from the forums.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#post-object">Post Object</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>Maximum posts to retrieve.</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>locked</td>
+<td>If the news is limited to a month.</td>
+<td>GET Parameter</td>
+</tr>
+<tr>
+<td>monthsago</td>
+<td>Which month should be retrieved.</td>
+<td>GET Parameter</td>
+</tr>
+</tbody></table>
 <h1 id='response-codes'>Response Codes</h1>
 <p>The Limelight API uses the following HTTP codes:</p>
 
@@ -1412,7 +1759,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>200</td>
 <td>Success.</td>
-<td>GET, PUT, DELETE</td>
+<td>*</td>
 </tr>
 <tr>
 <td>201</td>
@@ -1420,23 +1767,18 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <td>POST</td>
 </tr>
 <tr>
-<td>301</td>
-<td>Redirection.</td>
-<td>*</td>
-</tr>
-<tr>
 <td>400</td>
-<td>Bad Request.</td>
+<td>Bad Request / Data Error.</td>
 <td>*</td>
 </tr>
 <tr>
 <td>401</td>
-<td>No authorization header sent.</td>
+<td>Auth required.</td>
 <td>*</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Bad / Invalid authorization.</td>
+<td>Auth failed.</td>
 <td>*</td>
 </tr>
 <tr>
@@ -1455,13 +1797,8 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <td>*</td>
 </tr>
 <tr>
-<td>502</td>
-<td>Gateway Error</td>
-<td>*</td>
-</tr>
-<tr>
 <td>503</td>
-<td>Service Unavaliable</td>
+<td>Service Unavailable / Under Maintenance</td>
 <td>*</td>
 </tr>
 </tbody></table>
