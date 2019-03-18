@@ -9,7 +9,7 @@ As of API version v2, API response objects have been standardized, and the respo
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/api-response.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/api-response.schema.json",
 	"title": "API Response Object",
 	"description": "The base object returned by any query.",
 	"type": "object",
@@ -43,7 +43,7 @@ A collection of multiple returned resources.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/array.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/array.schema.json",
 	"title": "Array",
 	"description": "An array with multiple sets of contained data.",
 	"type": "array",
@@ -62,7 +62,7 @@ The API data object is returned when providing a generic query against the root 
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/apidata.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/apidata.schema.json",
 	"title": "API Data",
 	"description": "An object which contains data about the API itself.",
 	"type": "object",
@@ -100,7 +100,7 @@ The base player object is the minimum amount of data used to describe a player i
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/base-player.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/base-player.schema.json",
 	"title": "Base Player Object",
 	"description": "The base player object.",
 	"type": "object",
@@ -128,11 +128,11 @@ The clan member object is returned from clan APIs, and has additional informatio
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/clan-player.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/clan-player.schema.json",
 	"title": "Clan Player Object",
 	"description": "The player object returned by Clan APIs.",
 	"type": "object",
-	"allOf": [{"$ref": "https://joshpiper.github.io/slate/base-player.schema.json"}],
+	"allOf": [{"$ref": "https://dev.limelightgaming.net/docs-api/base-player.schema.json"}],
 	"properties": {
 		"rankid": {
 			"description": "ID which represents the player's rank within the clan.",
@@ -156,7 +156,7 @@ These objects are emitted by the changelog APIs.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/changelog.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/changelog.schema.json",
 	"title": "Changelog",
 	"description": "The representation of a public commit.",
 	"type": "object",
@@ -196,7 +196,7 @@ Rank permission objects are used to represent different rank permission structur
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/rank-permissions.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/rank-permissions.schema.json",
 	"title": "Clan Rank Permissions",
 	"description": "The representation of a clan rank's permissions.",
 	"type": "object",
@@ -235,7 +235,7 @@ The clan rank object describes a single rank within the clan structure and can o
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/rank.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/rank.schema.json",
 	"title": "Changelog",
 	"description": "The representation of a clan rank.",
 	"type": "object",
@@ -250,10 +250,43 @@ The clan rank object describes a single rank within the clan structure and can o
 		},
 		"perms": {
 			"description": "The rank permissions.",
-			"$ref": "https://joshpiper.github.io/slate/base-player.schema.json"
+			"$ref": "https://dev.limelightgaming.net/docs-api/base-player.schema.json"
 		}
 	},
 	"required": ["id", "name"]
+}
+```
+
+## Clan Invite
+
+The clan invite object provides information about invites.
+
+> Clan Invite Schema:
+
+```json
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://dev.limelightgaming.net/docs-api/clan-invite.schema.json",
+	"title": "Clan Player Object",
+	"description": "The invite object returned by Clan APIs.",
+	"type": "object",
+	"properties": {
+		"invitedby": {
+			"description": "Name (!) of the player who invited the player.",
+			"type": "string"
+		},
+		"time": {
+			"description": "RFC 3339 encoded timestamp.",
+			"type": "string",
+			"regex": "(\\d+)-(0[1-9]|1[012])-(0[1-9]|[12]\\d|3[01])[Tt]([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d|60)(\\.\\d+)?(([Zz])|([\\+|\\-]([01]\\d|2[0-3]):[0-5]\\d))"
+		},
+		"player": {
+			"description": "The player who is being invited.",
+			"type": "object",
+			"allOf": [{"$ref": "https://dev.limelightgaming.net/docs-api/base-player.schema.json"}]
+		}
+	},
+	"required": ["player", "time", "invitedby"]
 }
 ```
 
@@ -264,8 +297,8 @@ The clan object contains all data required for the identification of a clan.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/clan.schema.json",
-	"title": "Changelog",
+	"$id": "https://dev.limelightgaming.net/docs-api/clan.schema.json",
+	"title": "Clan",
 	"description": "The representation of a clan.",
 	"type": "object",
 	"properties": {
@@ -280,12 +313,12 @@ The clan object contains all data required for the identification of a clan.
 		"ranks": {
 			"description": "The rank permissions.",
 			"type": "array",
-			"items": "https://joshpiper.github.io/slate/rank.schema.json"
+			"items": "https://dev.limelightgaming.net/docs-api/rank-permissions.json"
 		},
 		"members": {
 			"description": "The members.",
 			"type": "array",
-			"items": "https://joshpiper.github.io/slate/clan-player.schema.json"
+			"items": "https://dev.limelightgaming.net/docs-api/clan-player.schema.json"
 		}
 	},
 	"required": ["id", "name"]
@@ -299,7 +332,7 @@ This data is only used by the /me endpoint to identify the user that owns this k
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/me.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/me.schema.json",
 	"title": "Self",
 	"description": "Data about a user key.",
 	"type": "object",
@@ -339,7 +372,7 @@ This is data returned by API key endpoints.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/key.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/key.schema.json",
 	"title": "API Key",
 	"description": "API key data.",
 	"type": "object",
@@ -369,7 +402,7 @@ This is data returned by any endpoint handling posts.
 ```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://joshpiper.github.io/slate/post.schema.json",
+	"$id": "https://dev.limelightgaming.net/docs-api/post.schema.json",
 	"title": "Post",
 	"description": "Forum post.",
 	"type": "object",
