@@ -1459,17 +1459,17 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>legacy</td>
 <td>Switch for legacy mode (object with named revisions, instead of array.)</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>Optional maximum</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>skip</td>
 <td>Optional number to skip</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h3 id='get-changelogs-total'>GET /changelogs/total</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/changelogs/total"</span>
@@ -1488,12 +1488,12 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>limit</td>
 <td>Optional maximum</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>skip</td>
 <td>Optional number to skip</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h2 id='clan-apis'>Clan APIs</h2>
@@ -1514,17 +1514,17 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>with</td>
 <td>Comma separated list of relations to get with the clans. (ranks,perms,members)</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>Optional maximum</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>skip</td>
 <td>Optional number to skip</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h3 id='get-clans-id'>GET /clans/:id</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">"</span>
@@ -1548,7 +1548,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>with</td>
 <td>Comma separated list of relations to get with the clans. (ranks,perms,members)</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h3 id='get-clans-id-members'>GET /clans/:id/members</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members"</span>
@@ -1658,7 +1658,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>with</td>
 <td>Comma separated list of relations to get with the clans. (perms)</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h3 id='get-clans-id-ranks-rid'>GET /clans/:id/ranks/:rid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/ranks/</span><span class="nv">$rid</span><span class="s2">"</span>
@@ -1687,7 +1687,7 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>with</td>
 <td>Comma separated list of relations to get with the clans. (perms)</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h3 id='get-clans-id-ranks-rid-2'>GET /clans/:id/ranks/:rid</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/ranks/</span><span class="nv">$rid</span><span class="s2">/perms"</span>
@@ -1733,17 +1733,17 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <tr>
 <td>limit</td>
 <td>Maximum posts to retrieve.</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>locked</td>
 <td>If the news is limited to a month.</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 <tr>
 <td>monthsago</td>
 <td>Which month should be retrieved.</td>
-<td>GET Parameter</td>
+<td>Query String</td>
 </tr>
 </tbody></table>
 <h1 id='response-codes'>Response Codes</h1>
