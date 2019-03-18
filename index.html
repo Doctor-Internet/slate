@@ -231,6 +231,9 @@
             <a href="#resource-relationships" class="toc-h1 toc-link" data-title="Resource Relationships">Resource Relationships</a>
           </li>
           <li>
+            <a href="#passing-data" class="toc-h1 toc-link" data-title="Passing Data">Passing Data</a>
+          </li>
+          <li>
             <a href="#api-v1" class="toc-h1 toc-link" data-title="API v1">API v1</a>
               <ul class="toc-list-h2">
                   <li>
@@ -343,37 +346,38 @@ Our API can be used to access various endpoints, for information about our playe
 <blockquote>
 <p>To authorize, we accept API keys as bearer tokens in Authorization headers.</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"endpoint"</span>
-  -H <span class="s2">"Authorization: Bearer my_api_key"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"endpoint"</span>
+  -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
 </code></pre>
 <p>Key generation endpoints also support Basic authentication using your Limelight Forum account details.</p>
 
 <blockquote>
 <p>Basic auth is also supported.</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"endpoint"</span>
-  -H <span class="s2">"Authorization: Basic BASE64(user:pass)"</span>
+<pre class="highlight shell"><code>define -r <span class="nv">my_basic_key</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$user</span><span class="s2">"</span>:<span class="s2">"</span><span class="nv">$pass</span><span class="s2">"</span> | base64 --encode<span class="k">)</span>
+curl <span class="s2">"endpoint"</span>
+  -H <span class="s2">"Authorization: Basic </span><span class="nv">$my_basic_key</span><span class="s2">"</span>
 </code></pre>
-<p>Currently API keys can only be generated programatically using basic auth via key generation endpoints. As this can be done via browser, we highly recommend manually generating these keys, and using them for your applications.</p>
+<p>Currently API keys can only be generated programmatically using basic auth via key generation endpoints. As this can be done via browser, we highly recommend manually generating these keys, and using them for your applications.</p>
 
 <p>We only require API keys for secured endpoints.</p>
 <h1 id='versioning'>Versioning</h1>
-<p>API version are differentated by an optional version identifier between the host and endpoint sections of the URL.</p>
+<p>API version are differentiated by an optional version identifier between the host and endpoint sections of the URL.</p>
 
 <blockquote>
 <p>This points at the default API root.</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/"</span>
 </code></pre>
 <blockquote>
 <p>This points at the development API root.</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/dev/"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/dev/"</span>
 </code></pre>
 <blockquote>
 <p>This points at the v2 API root.</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/"</span>
 </code></pre>
 <table><thead>
 <tr>
@@ -397,9 +401,15 @@ Our API can be used to access various endpoints, for information about our playe
 <h1 id='resource-relationships'>Resource Relationships</h1>
 <p>Some endpoints which have related data, such as clans and their members, can be retrieved in a single API call, using the with parameter.</p>
 
-<p>For example, the /clans/{id} endpoint allows with settings to retrieve ranks without using the /clans/{id}/ranks endpoint, by using /clans/{id}/?with=ranks.</p>
+<p>For example, the /clans/:id endpoint allows with settings to retrieve ranks without using the /clans/:id/ranks endpoint, by using /clans/:id/?with=ranks.</p>
 
-<p>These are simple comma seperated values, added to the with parameter.</p>
+<p>These are simple comma separated values, added to the with parameter.</p>
+<h1 id='passing-data'>Passing Data</h1>
+<p>Data can be passed to POST/PUT/PATCH commands in various ways.</p>
+
+<p>Standard form encoding (application/x-www-form-urlencoded and multipart/form-data) work, as well as json input (application/json).</p>
+
+<p>Ensure that for all requests, an appropriate Content-Type header is sent.</p>
 <h1 id='api-v1'>API v1</h1>
 <p>All the following endpoints use the v1 interface. Whilst it is stable, it is also more difficult to implement, as returned data is not standardized between endpoints.</p>
 <h2 id='api-data'>API Data</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v1/"</span>
@@ -1549,6 +1559,53 @@ Clan members can be retrieved using ?with=members, in place of the /clans/{id}/m
 <td>with</td>
 <td>Comma separated list of relations to get with the clans. (ranks,perms,members)</td>
 <td>Query String</td>
+</tr>
+</tbody></table>
+<h3 id='get-clans-id-invites'>GET /clans/:id/invites</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/invites"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<p>Retrieve your clan&#39;s invites.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-invite">Clan Invite</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
+</tr>
+</tbody></table>
+<h3 id='post-clans-id-invites'>POST /clans/:id/invites</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/invites"</span> <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer </span><span class="nv">$my_api_key</span><span class="s2">"</span> <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    --data <span class="s1">'{"steamid":"STEAM_0:0:20414198"}'</span>
+</code></pre>
+<aside class="success">This endpoint requires authorization.</aside>
+
+<p>Retrieve your clan&#39;s invites.</p>
+
+<p>Response: <a href="#array">Array</a>( <a href="#clan-invite">Clan Invite</a> )</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Position</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The clan id.</td>
+<td>Endpoint URL</td>
 </tr>
 </tbody></table>
 <h3 id='get-clans-id-members'>GET /clans/:id/members</h3><pre class="highlight shell"><code>curl <span class="s2">"https://api.limelightgaming.net/v2/clans/</span><span class="nv">$id</span><span class="s2">/members"</span>
